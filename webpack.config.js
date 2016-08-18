@@ -12,8 +12,12 @@ var loaders = [
 		loader: extractCSS.extract('style', 'css')
 	},
 	{
-		test: /\.(jp?eg|png|gif|webp)$/,
-		loader: 'file?name=./img/[hash:8].[ext]'
+		test: /\.html$/,
+		loader: 'html?interpolate'
+	},
+	{
+		test: /\.(jpe?g|png|gif|webp)$/,
+		loader: 'file?name=./img/[name].[hash:8].[ext]'
 	},
 	{
 		test: /\.(ttf|eot|woff|woff2)$/,
@@ -27,11 +31,11 @@ var loaders = [
 	{
 		test: /.*(reveal.js\\plugin).*js$/,
 		loader: 'uglify'
-	},
+	}
 ];
 
 var plugins = [
-	new CleanWebpackPlugin('./build'),
+	//new CleanWebpackPlugin('./build'),
 	extractCSS,
 	new HtmlWebpackPlugin({
 		template: path.resolve(__dirname, 'src', 'view', 'index.html')

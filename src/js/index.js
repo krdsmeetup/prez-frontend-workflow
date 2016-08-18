@@ -7,10 +7,11 @@ window.Reveal = require('reveal.js');
 //required revealjs plugins
 require('reveal.js/plugin/notes/notes.js');
 require('reveal.js/plugin/notes/notes.html');
+//require('reveal.js/plugin/zoom-js/zoom.js');
 
 Reveal.initialize({
 	controls: false,
-	progress: true,
+	progress: false,
 	history: true,
 	center: true,
 	transition: 'convex',
