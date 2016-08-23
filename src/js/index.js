@@ -9,6 +9,8 @@ require('reveal.js/plugin/notes/notes.js');
 require('reveal.js/plugin/notes/notes.html');
 //require('reveal.js/plugin/zoom-js/zoom.js');
 
+require('!!file?name=./img/[name].[ext]!../img/share.jpg');
+
 Reveal.initialize({
 	controls: false,
 	progress: false,
